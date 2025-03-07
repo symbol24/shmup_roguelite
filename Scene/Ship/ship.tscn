@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8d4yp471gdr7"]
+
+[ext_resource type="Script" uid="uid://yivjwni6uhmx" path="res://Code/Ship/ship.gd" id="1_8iihr"]
+[ext_resource type="TileSet" uid="uid://26cpr7etcqo4" path="res://Data/grey_box_tilesettres.tres" id="2_1drkp"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_p3gfm"]
+points = PackedVector2Array(-16, 0, 16, 0, 0, -32)
+
+[node name="Ship" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_8iihr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_p3gfm")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 254, 255, 0, 0, 19, 0, 21, 0, 0, 0, 255, 255, 255, 255, 0, 0, 19, 0, 22, 0, 0, 0, 0, 0, 254, 255, 0, 0, 20, 0, 21, 0, 0, 0, 0, 0, 255, 255, 0, 0, 20, 0, 22, 0, 0, 0)
+tile_set = ExtResource("2_1drkp")

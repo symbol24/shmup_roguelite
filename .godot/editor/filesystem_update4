@@ -1,0 +1,4 @@
+res://Scene/Ship/ship.tscn
+res://Scene/Levels/level.tscn
+res://Data/Ships/test_ship.tres
+res://Data/grey_box_tilesettres.tres

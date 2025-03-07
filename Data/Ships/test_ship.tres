@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ShipData" load_steps=2 format=3 uid="uid://cqqepywdw7fiu"]
+
+[ext_resource type="Script" uid="uid://devwiswtyh440" path="res://Code/Ship/ship_data.gd" id="1_bhcnq"]
+
+[resource]
+script = ExtResource("1_bhcnq")
+id = "test_ship"
+base_speed = 400.0
+metadata/_custom_type_script = "uid://devwiswtyh440"
