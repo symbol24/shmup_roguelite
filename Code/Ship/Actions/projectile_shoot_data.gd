@@ -16,6 +16,7 @@ class_name ProjectileShootData extends ActionData
 @export var proj_crit_damage:float = 0.0
 @export var proj_damage_type:Enums.Damage_Type
 @export var proj_sub_damage_types:Array[Enums.Damage_Sub_Type]
+@export var proj_pierce_count:float = 1.0
 
 @export_group("Moving")
 @export var speed:float = 1000.0

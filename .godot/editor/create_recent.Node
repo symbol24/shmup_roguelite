@@ -1,6 +1,10 @@
-CPUParticles2D
+StaticBody2D
+ProgressBar
 CollisionShape2D
+HitBox
 Sprite2D
+RigidBody2D
+CPUParticles2D
 Node2D
 Projectile
 Area2D
@@ -9,6 +13,3 @@ HBoxContainer
 TextureProgressBar
 Control
 CanvasLayer
-Camera2D
-RigidBody2D
-TileMapLayer

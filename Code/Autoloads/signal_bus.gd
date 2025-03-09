@@ -7,3 +7,7 @@ signal ActionToggled(action_id:StringName, toggle:bool)
 
 # Ship
 signal ShipReady(ship:Ship)
+
+
+# UI
+signal DamageNumber(damage:Damage, pos:Vector2)

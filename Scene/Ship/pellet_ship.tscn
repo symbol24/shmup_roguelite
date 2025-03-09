@@ -19,6 +19,7 @@ points = PackedVector2Array(-16, 0, 16, 0, 0, -32)
 
 [node name="PelletShip" type="RigidBody2D"]
 process_mode = 1
+top_level = true
 collision_layer = 2
 gravity_scale = 0.0
 linear_damp = 0.3

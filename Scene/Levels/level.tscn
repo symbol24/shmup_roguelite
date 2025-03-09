@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cage0tp3burol"]
+[gd_scene load_steps=5 format=3 uid="uid://cage0tp3burol"]
 
 [ext_resource type="PackedScene" uid="uid://c8d4yp471gdr7" path="res://Scene/Ship/pellet_ship.tscn" id="2_61dc2"]
 [ext_resource type="Texture2D" uid="uid://di7vgrdu84bu6" path="res://icon.svg" id="2_a2nb1"]
 [ext_resource type="Script" uid="uid://h3syceewdphi" path="res://Code/UI/PlayerUi/action_ui.gd" id="2_ahbjf"]
+[ext_resource type="PackedScene" uid="uid://c7t5se1mt37bc" path="res://Scene/Stuff/target.tscn" id="4_ahbjf"]
 
 [node name="Level" type="Node2D" groups=["level"]]
 
@@ -93,3 +94,6 @@ texture = ExtResource("2_a2nb1")
 [node name="PelletShip" parent="." instance=ExtResource("2_61dc2")]
 position = Vector2(642, 359)
 debug_spawn = true
+
+[node name="target" parent="." instance=ExtResource("4_ahbjf")]
+position = Vector2(408, 215)

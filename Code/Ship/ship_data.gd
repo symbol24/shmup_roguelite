@@ -64,6 +64,8 @@ var crit_chance:float:
 	get: return base_crit_chance + _get_value_from_run_upgrades(&"crit_chance") + _get_value_from_run_upgrades(&"crit_chance")
 var crit_damage:float:
 	get: return base_crit_damage + _get_value_from_run_upgrades(&"crit_damage") + _get_value_from_run_upgrades(&"crit_damage")
+var projectile_peirce_count:float:
+	get: return _get_value_from_run_upgrades(&"projectile_peirce_count") + _get_value_from_run_upgrades(&"projectile_peirce_count")
 
 # Defenses
 var current_armor:float
