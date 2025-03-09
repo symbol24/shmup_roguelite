@@ -1,4 +1,11 @@
-res://Data
+res://Scene/Projectile
+res://Data/Ships/PelletShip
+res://Code/Ship/Actions/PelletShip
+res://Code/UI/PlayerUi
+res://Code/Autoloads
+res://Code/Ship/Actions
+res://Code/Utilities
 res://Data/Ships
+res://Data
 res://Code/Ship
 res://Scene/Levels

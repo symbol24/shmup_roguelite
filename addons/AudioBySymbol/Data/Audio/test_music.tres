@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=3 format=3 uid="uid://wnpgq1km20y6"]
 
-[ext_resource type="Script" path="res://addons/AudioBySymbol/Code/Audio/audio_file.gd" id="1_afm3y"]
+[ext_resource type="Script" uid="uid://naq7mv4jk3ys" path="res://addons/AudioBySymbol/Code/Audio/audio_file.gd" id="1_afm3y"]
 [ext_resource type="AudioStream" uid="uid://bnaye333e2e2q" path="res://addons/AudioBySymbol/Audio/Music/Alan Walker - Dreamer [NCS Release].mp3" id="1_vjyvy"]
 
 [resource]
