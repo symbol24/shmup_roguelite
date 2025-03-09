@@ -6,7 +6,7 @@
 script = ExtResource("1_78o88")
 projectile_uid = "uid://dmo1du4xhvb28"
 proj_type = 0
-proj_damage = 1.0
+proj_damage = 5.0
 proj_count_per_attack = 1
 delay_between_proj = 0.1
 proj_attack_speed = 3.0

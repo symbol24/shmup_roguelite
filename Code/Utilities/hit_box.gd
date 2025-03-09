@@ -1,24 +1,29 @@
 class_name HitBox extends Area2D
 
 
-var parent:RigidBody2D
+@export var receive_delay:float = 0.1
+
+var parent:Node2D
 var can_receive:bool = true
 
 
 func _ready() -> void:
+	area_entered.connect(_area_entered)
 	parent = get_parent()
 
 
-func area_entered(area:Area2D) -> void:
+func _area_entered(area:Area2D) -> void:
 	if can_receive and area.has_method("get_damage"):
 		if parent.has_method("receive_damage"): 
 			parent.receive_damage(area.get_damage())
+			if area.has_method("destroy_self"): area.destroy_self()
 			_toggle_receive()
 
 
 func _toggle_receive() -> void:
 	if can_receive:
-		can_receive = false
-		get_tree().create_timer(0.1).timeout.connect(_toggle_receive)
+		if receive_delay > 0.0: 
+			can_receive = false
+			get_tree().create_timer(receive_delay).timeout.connect(_toggle_receive)
 	else:
 		can_receive = true
