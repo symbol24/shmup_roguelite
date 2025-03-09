@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="AudioData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="AudioData" load_steps=3 format=3 uid="uid://ds4soa5wy5nr"]
 
-[ext_resource type="Script" path="res://addons/AudioBySymbol/Code/Audio/audio_file.gd" id="1_n1qq0"]
-[ext_resource type="Script" path="res://addons/AudioBySymbol/Code/Audio/audio_data.gd" id="2_24vhu"]
+[ext_resource type="Script" uid="uid://naq7mv4jk3ys" path="res://addons/AudioBySymbol/Code/Audio/audio_file.gd" id="1_n1qq0"]
+[ext_resource type="Script" uid="uid://difrmqja72imv" path="res://addons/AudioBySymbol/Code/Audio/audio_data.gd" id="2_24vhu"]
 
 [resource]
 script = ExtResource("2_24vhu")

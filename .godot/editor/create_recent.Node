@@ -1,3 +1,14 @@
+CPUParticles2D
 CollisionShape2D
+Sprite2D
+Node2D
+Projectile
+Area2D
+Marker2D
+HBoxContainer
+TextureProgressBar
+Control
+CanvasLayer
+Camera2D
+RigidBody2D
 TileMapLayer
-CharacterBody2D
