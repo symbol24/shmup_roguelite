@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ProjectileShootData" load_steps=2 format=3 uid="uid://bcyf06bxbyug2"]
 
-[ext_resource type="Script" uid="uid://04crric0ncu5" path="res://Code/Ship/Actions/projectile_shoot_data.gd" id="1_78o88"]
+[ext_resource type="Script" path="res://Code/Ship/Actions/projectile_shoot_data.gd" id="1_78o88"]
 
 [resource]
 script = ExtResource("1_78o88")

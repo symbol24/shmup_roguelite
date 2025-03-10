@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 CollisionShape2D
 Line2D
 Projectile
 RayCast2D
 Marker2D
 Node2D
+=======
+CollisionPolygon2D
+Sprite2D
+>>>>>>> origin/main
 StaticBody2D
 ProgressBar
 HitBox
-Sprite2D
 RigidBody2D
 CPUParticles2D
 Area2D
 HBoxContainer
+<<<<<<< HEAD
+=======
+TextureProgressBar
+Control
+>>>>>>> origin/main

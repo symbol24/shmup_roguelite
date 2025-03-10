@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 res://Scene/Stuff/target.tscn
+=======
+res://Scene/Projectile/pellet.tscn
+>>>>>>> origin/main
 res://Data/grey_box_tilesettres.tres
 res://Data/Ships/PelletShip/pellet_ship_base_attack_data.tres
 res://Data/Ships/PelletShip/pellet_ship_missle_barrage_data.tres
 res://Scene/Levels/level.tscn
+<<<<<<< HEAD
 res://Scene/Projectile/pellet.tscn
 res://Scene/Ship/pellet_ship.tscn
 res://Scene/Projectile/pellet_ship_missile.tscn
@@ -14,3 +19,8 @@ res://Code/Projectiles/laser.gd
 res://Scene/Projectile/laser.tscn
 res://Data/Ships/EnergyLaserShip/energy_ship_laser_action_data.tres
 res://Code/Ship/Actions/projectile_shoot_data.gd
+=======
+res://Scene/Ship/pellet_ship.tscn
+res://Scene/Projectile/pellet_ship_missile.tscn
+res://Code/UI/PlayerUi/action_ui.gd
+>>>>>>> origin/main
