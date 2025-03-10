@@ -38,52 +38,52 @@ class_name ShipData extends Resource
 # HP
 var current_hp:float
 var max_hp:float:
-	get: return base_hp + _get_value_from_run_upgrades(&"hp") + _get_value_from_run_upgrades(&"hp")
+	get: return base_hp + _get_value_from_ship_upgrades(&"hp") + _get_value_from_run_upgrades(&"hp")
 var current_lives:int
 var max_lives:int:
-	get: return base_lives + int(_get_value_from_run_upgrades(&"lives")) + int(_get_value_from_run_upgrades(&"lives"))
+	get: return base_lives + int(_get_value_from_ship_upgrades(&"lives")) + int(_get_value_from_run_upgrades(&"lives"))
 
 # Movement
 var speed:float:
-	get: return base_speed + _get_value_from_run_upgrades(&"speed") + _get_value_from_run_upgrades(&"speed")
+	get: return base_speed + _get_value_from_ship_upgrades(&"speed") + _get_value_from_run_upgrades(&"speed")
 var dampening:float:
-	get: return base_damp + _get_value_from_run_upgrades(&"dampening") + _get_value_from_run_upgrades(&"dampening")
+	get: return base_damp + _get_value_from_ship_upgrades(&"dampening") + _get_value_from_run_upgrades(&"dampening")
 
 # Attack
 var damage:float:
-	get: return _get_value_from_run_upgrades(&"damage") + _get_value_from_run_upgrades(&"damage")
+	get: return _get_value_from_ship_upgrades(&"damage") + _get_value_from_run_upgrades(&"damage")
 var attack_speed:float:
-	get: return _get_value_from_run_upgrades(&"attack_speed") + _get_value_from_run_upgrades(&"attack_speed")
+	get: return _get_value_from_ship_upgrades(&"attack_speed") + _get_value_from_run_upgrades(&"attack_speed")
 var projectile_speed:float:
-	get: return _get_value_from_run_upgrades(&"projectile_speed") + _get_value_from_run_upgrades(&"projectile_speed")
+	get: return _get_value_from_ship_upgrades(&"projectile_speed") + _get_value_from_run_upgrades(&"projectile_speed")
 var projectile_size:float:
-	get: return _get_value_from_run_upgrades(&"projectile_size") + _get_value_from_run_upgrades(&"projectile_size")
+	get: return _get_value_from_ship_upgrades(&"projectile_size") + _get_value_from_run_upgrades(&"projectile_size")
 var projectile_life_time_distance:float:
-	get: return _get_value_from_run_upgrades(&"projectile_life_time_distance") + _get_value_from_run_upgrades(&"projectile_life_time_distance")
+	get: return _get_value_from_ship_upgrades(&"projectile_life_time_distance") + _get_value_from_run_upgrades(&"projectile_life_time_distance")
 var crit_chance:float:
-	get: return base_crit_chance + _get_value_from_run_upgrades(&"crit_chance") + _get_value_from_run_upgrades(&"crit_chance")
+	get: return base_crit_chance + _get_value_from_ship_upgrades(&"crit_chance") + _get_value_from_run_upgrades(&"crit_chance")
 var crit_damage:float:
-	get: return base_crit_damage + _get_value_from_run_upgrades(&"crit_damage") + _get_value_from_run_upgrades(&"crit_damage")
+	get: return base_crit_damage + _get_value_from_ship_upgrades(&"crit_damage") + _get_value_from_run_upgrades(&"crit_damage")
 var projectile_peirce_count:float:
-	get: return _get_value_from_run_upgrades(&"projectile_peirce_count") + _get_value_from_run_upgrades(&"projectile_peirce_count")
+	get: return _get_value_from_ship_upgrades(&"projectile_peirce_count") + _get_value_from_run_upgrades(&"projectile_peirce_count")
 
 # Defenses
 var current_armor:float
 var max_armor:float:
-	get: return base_armor + _get_value_from_run_upgrades(&"armor") + _get_value_from_run_upgrades(&"armor")
+	get: return base_armor + _get_value_from_ship_upgrades(&"armor") + _get_value_from_run_upgrades(&"armor")
 var current_shield:float
 var max_shield:float:
-	get: return base_shield + _get_value_from_run_upgrades(&"shield") + _get_value_from_run_upgrades(&"shield")
+	get: return base_shield + _get_value_from_ship_upgrades(&"shield") + _get_value_from_run_upgrades(&"shield")
 
 # Resistances
 var physical_resist:float:
-	get: return base_physical_resistance + _get_value_from_run_upgrades(&"physical_resist") + _get_value_from_run_upgrades(&"physical_resist")
+	get: return base_physical_resistance + _get_value_from_ship_upgrades(&"physical_resist") + _get_value_from_run_upgrades(&"physical_resist")
 var energy_resist:float:
-	get: return base_energy_resistance + _get_value_from_run_upgrades(&"energy_resist") + _get_value_from_run_upgrades(&"energy_resist")
+	get: return base_energy_resistance + _get_value_from_ship_upgrades(&"energy_resist") + _get_value_from_run_upgrades(&"energy_resist")
 var plasma_resist:float:
-	get: return base_plasma_resistance + _get_value_from_run_upgrades(&"plasma_resist") + _get_value_from_run_upgrades(&"plasma_resist")
+	get: return base_plasma_resistance + _get_value_from_ship_upgrades(&"plasma_resist") + _get_value_from_run_upgrades(&"plasma_resist")
 var explosive_resist:float:
-	get: return base_explosive_resistance + _get_value_from_run_upgrades(&"explosive_resist") + _get_value_from_run_upgrades(&"explosive_resist")
+	get: return base_explosive_resistance + _get_value_from_ship_upgrades(&"explosive_resist") + _get_value_from_run_upgrades(&"explosive_resist")
 
 # Upgrades
 var active_ship_upgrades:Array = []

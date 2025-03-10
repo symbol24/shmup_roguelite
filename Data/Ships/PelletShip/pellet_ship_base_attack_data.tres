@@ -15,6 +15,7 @@ proj_crit_chance = 0.05
 proj_crit_damage = 0.2
 proj_damage_type = 0
 proj_sub_damage_types = Array[int]([])
+proj_pierce_count = 1.0
 speed = 750.0
 life_time_distance = 150000.0
 length = 100.0

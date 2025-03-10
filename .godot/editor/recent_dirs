@@ -1,6 +1,9 @@
+res://Data/Ships/EnergyLaserShip
+res://Scene/Projectile
+res://Code/Projectiles
+res://Code/Ship/Actions/EnergyLaserShip
 res://Code/Stuff
 res://Scene/Stuff
-res://Scene/Projectile
 res://Data/Ships/PelletShip
 res://Code/Ship/Actions/PelletShip
 res://Code/UI/PlayerUi
