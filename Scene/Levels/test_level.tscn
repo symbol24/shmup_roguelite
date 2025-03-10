@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn7ci5var4qqe"]
+
+[ext_resource type="PackedScene" uid="uid://c8d4yp471gdr7" path="res://Scene/Ship/pellet_ship.tscn" id="1_rewe1"]
+[ext_resource type="PackedScene" uid="uid://c7t5se1mt37bc" path="res://Scene/Stuff/target.tscn" id="2_usv2h"]
+
+[node name="TestLevel" type="Node2D" groups=["level"]]
+
+[node name="PelletShip" parent="." instance=ExtResource("1_rewe1")]
+position = Vector2(642, 362)
+debug_spawn = true
+
+[node name="target" parent="." instance=ExtResource("2_usv2h")]
+position = Vector2(474, 177)

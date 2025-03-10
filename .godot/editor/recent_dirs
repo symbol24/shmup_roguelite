@@ -1,3 +1,4 @@
+res://Scene/Levels
 res://Data/Ships/EnergyLaserShip
 res://Scene/Projectile
 res://Code/Projectiles
@@ -13,4 +14,3 @@ res://Code/Utilities
 res://Data/Ships
 res://Data
 res://Code/Ship
-res://Scene/Levels
