@@ -1,6 +1,3 @@
-res://Data/Ships/TwinstickShip
-res://Code/Ship
-res://Code/Ship/Actions
 res://Scene/Levels
 res://Data/Ships/EnergyLaserShip
 res://Scene/Projectile
@@ -12,6 +9,8 @@ res://Data/Ships/PelletShip
 res://Code/Ship/Actions/PelletShip
 res://Code/UI/PlayerUi
 res://Code/Autoloads
+res://Code/Ship/Actions
 res://Code/Utilities
 res://Data/Ships
 res://Data
+res://Code/Ship

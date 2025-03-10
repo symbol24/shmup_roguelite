@@ -1,7 +1,7 @@
 class_name Projectile extends AttackArea
 
 
-var direction:Vector2 = Vector2.RIGHT
+var direction:Vector2 = Vector2.UP
 var life_timer:float = 0.0
 var pierce_count:float = 1
 
