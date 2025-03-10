@@ -7,8 +7,10 @@ class_name Ship extends RigidBody2D
 
 
 var data:ShipData = null
+var direction:Vector2 = Vector2.ZERO
 var last_direction:Vector2 = Vector2.ZERO
 var actions:Array[ShipAction] = []
+
 
 func _ready() -> void:
 	if debug_spawn:
@@ -17,7 +19,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var direction:Vector2 = Input.get_vector("left", "right", "up", "down")
 	var target_angle:float = Vector2.UP.angle_to(last_direction)
 	if direction != Vector2.ZERO: 
 		target_angle = Vector2.UP.angle_to(direction)
