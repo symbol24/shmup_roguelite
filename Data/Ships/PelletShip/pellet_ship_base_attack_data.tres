@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ProjectileShootData" load_steps=2 format=3 uid="uid://bcyf06bxbyug2"]
 
-[ext_resource type="Script" path="res://Code/Ship/Actions/projectile_shoot_data.gd" id="1_78o88"]
+[ext_resource type="Script" uid="uid://04crric0ncu5" path="res://Code/Ship/Actions/projectile_shoot_data.gd" id="1_78o88"]
 
 [resource]
 script = ExtResource("1_78o88")
@@ -19,6 +19,7 @@ proj_pierce_count = 1.0
 speed = 750.0
 life_time_distance = 150000.0
 length = 100.0
+attacks_per_second = 1
 dampening = 0.0
 area_size = 1.0
 projectile_life_time = 0.0
