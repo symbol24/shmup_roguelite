@@ -1,8 +1,9 @@
+CollisionPolygon2D
+Sprite2D
 StaticBody2D
 ProgressBar
 CollisionShape2D
 HitBox
-Sprite2D
 RigidBody2D
 CPUParticles2D
 Node2D
@@ -12,4 +13,3 @@ Marker2D
 HBoxContainer
 TextureProgressBar
 Control
-CanvasLayer
