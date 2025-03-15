@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	if can_act and shooting and not cycling: _cycle_shoot()
 
 
-func _activate(_ship:Ship) -> void:
+func _activate(_ship:Node2D) -> void:
 	ship = _ship
 	can_act = true
 	delay_timer = 0.0
