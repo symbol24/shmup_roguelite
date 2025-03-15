@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bn7ci5var4qqe"]
 
-[ext_resource type="PackedScene" uid="uid://c8d4yp471gdr7" path="res://Scene/Ship/pellet_ship.tscn" id="1_rewe1"]
+[ext_resource type="PackedScene" uid="uid://bkr8qegeloeac" path="res://Scene/Ship/twinstick_ship.tscn" id="2_6e4q7"]
 [ext_resource type="PackedScene" uid="uid://c7t5se1mt37bc" path="res://Scene/Stuff/target.tscn" id="2_usv2h"]
 
 [node name="TestLevel" type="Node2D" groups=["level"]]
@@ -11,3 +11,7 @@ debug_spawn = true
 
 [node name="target" parent="." instance=ExtResource("2_usv2h")]
 position = Vector2(474, 177)
+
+[node name="twinstickship" parent="." instance=ExtResource("2_6e4q7")]
+position = Vector2(640, 362)
+debug_spawn = true
