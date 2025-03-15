@@ -5,10 +5,6 @@
 
 [node name="TestLevel" type="Node2D" groups=["level"]]
 
-[node name="PelletShip" parent="." instance=ExtResource("1_rewe1")]
-position = Vector2(642, 362)
-debug_spawn = true
-
 [node name="target" parent="." instance=ExtResource("2_usv2h")]
 position = Vector2(474, 177)
 
