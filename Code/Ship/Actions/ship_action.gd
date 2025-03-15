@@ -3,10 +3,11 @@ class_name ShipAction extends Node2D
 
 @export var data:ActionData
 
-var ship:Node2D
+var ship:Ship
 var can_act:bool = false
 var timer_active:bool = false
 var delay_timer:float = 1.0
+		
 
 
 func _ready() -> void:
@@ -17,7 +18,7 @@ func _process(delta: float) -> void:
 	if timer_active: _reduce_delay_timer(delta)
 
 
-func _activate(_ship:Node2D) -> void:
+func _activate(_ship:Ship) -> void:
 	ship = _ship
 	can_act = true
 

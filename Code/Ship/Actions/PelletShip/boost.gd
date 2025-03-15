@@ -26,9 +26,9 @@ var recharge_delay_timer:float = 1.0:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed(data.input_name):
+	if event.is_action_pressed("movement_option"):
 		_boost(true)
-	elif event.is_action_released(data.input_name):
+	elif event.is_action_released("movement_option"):
 		_boost(false)
 
 
@@ -52,7 +52,7 @@ func _boost(is_on:bool = false) -> void:
 	Signals.ActionToggled.emit(data.id, boosting)
 
 
-func _activate(_ship:Node2D) -> void:
+func _activate(_ship:Ship) -> void:
 	ship = _ship
 	can_act = true
 	current_boost_time = data.max_boost_time

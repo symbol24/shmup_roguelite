@@ -34,7 +34,7 @@ func setup_attack(_data:ActionData, _owner:Node2D, pos:Vector2 = Vector2.ZERO, r
 	rotation = rot
 	direction = direction.rotated(rotation)
 	life_timer = data.projectile_life_time
-	pierce_count = data.proj_pierce_count + attack_owner.data.projectile_peirce_count if attack_owner is Ship else data.proj_pierce_count
+	pierce_count = data.proj_pierce_count + attack_owner.data.projectile_peirce_count if attack_owner is Ship else data.projectile_peirce_count
 
 
 func get_damage() -> Damage:

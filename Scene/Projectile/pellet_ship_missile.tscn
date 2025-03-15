@@ -13,14 +13,12 @@ script = ExtResource("1_ot2gq")
 metadata/_custom_type_script = "uid://p5fdl7f2epib"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
 scale = Vector2(0.1, 0.4)
 texture = ExtResource("2_sq1ld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
 shape = SubResource("RectangleShape2D_sq1ld")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(-26, 0)
+position = Vector2(0, 25)
 gravity = Vector2(0, 0)
