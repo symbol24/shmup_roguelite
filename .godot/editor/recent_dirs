@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+res://Data/Ships/TwinstickShip
+res://Scene/Ship
+res://Data/Ships/CharacterBodyShip
+res://Code/Ship/Actions
+res://Code/Ship
+>>>>>>> symbol/twinstick_commit
 res://Scene/Levels
 res://Data/Ships/EnergyLaserShip
 res://Scene/Projectile

@@ -1,5 +1,22 @@
 res://Scene/Levels/test_level.tscn
+res://Data/Ships/TwinstickShip/twinstick_aim_data.tres
+res://Data/Ships/TwinstickShip/twinstick_shoot_data.tres
 res://Data/grey_box_tilesettres.tres
 res://Data/Ships/PelletShip/pellet_ship_base_attack_data.tres
 res://Data/Ships/PelletShip/pellet_ship_missle_barrage_data.tres
 res://Scene/Ship/pellet_ship.tscn
+<<<<<<< HEAD
+=======
+res://Scene/Ship/twinstick_ship.tscn
+res://Data/Ships/TwinstickShip/twinstick_missle_barrage_data.tres
+res://Data/Ships/CharacterBodyShip/character_body_missile_barrage_data.tres
+res://Data/Ships/TwinstickShip/twinstick_mines_data.tres
+res://Data/Ships/TwinstickShip/twinstick_ship_boost_data.tres
+res://Data/Ships/TwinstickShip/twinstick_missile_barrage_data.tres
+res://Scene/Ship/characterbody_ship.tscn
+res://Data/Ships/CharacterBodyShip/character_body_base_attack_data.tres
+res://Code/Ship/Actions/CB2DShip/cb2d_twinastick_aim.gd
+res://Code/Ship/characterbody_ship.gd
+res://Code/Ship/Actions/ship_action.gd
+res://Code/Ship/Actions/CB2DShip/character_body_move.gd
+>>>>>>> symbol/twinstick_commit
