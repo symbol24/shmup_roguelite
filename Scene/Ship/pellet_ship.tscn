@@ -11,9 +11,7 @@
 [ext_resource type="Resource" uid="uid://qcri4mle0d5e" path="res://Data/Ships/PelletShip/pellet_ship_missle_barrage_data.tres" id="9_7emw8"]
 [ext_resource type="Resource" uid="uid://tlhlkho72uwm" path="res://Data/Ships/PelletShip/pellet_ship_boost_data.tres" id="9_ds8ke"]
 [ext_resource type="Resource" uid="uid://c53nncy5dnedp" path="res://Data/Ships/PelletShip/pellet_ship_mines_data.tres" id="10_6qb6b"]
-
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_p3gfm"]
-points = PackedVector2Array(-16, 0, 16, 0, 0, -32)
+[ext_resource type="Texture2D" uid="uid://bnmhdykdivwov" path="res://Textures/ship01_spritesheet.png" id="12_b562i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kawgw"]
 
@@ -28,10 +26,12 @@ debug_data = ExtResource("2_t81sj")
 
 [node name="play_camera" type="Camera2D" parent="." groups=["play_camera"]]
 
-[node name="move_collider" type="CollisionShape2D" parent="."]
-shape = SubResource("ConvexPolygonShape2D_p3gfm")
+[node name="move_collider" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(0, -15, 15, 14, -15, 14)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+visible = false
 tile_map_data = PackedByteArray(0, 0, 255, 255, 254, 255, 0, 0, 19, 0, 21, 0, 0, 0, 255, 255, 255, 255, 0, 0, 19, 0, 22, 0, 0, 0, 0, 0, 254, 255, 0, 0, 20, 0, 21, 0, 0, 0, 0, 0, 255, 255, 0, 0, 20, 0, 22, 0, 0, 0)
 tile_set = ExtResource("2_14yri")
 
@@ -40,10 +40,10 @@ collision_layer = 2
 collision_mask = 16
 
 [node name="hit_collider" parent="HitBox" index="0"]
-position = Vector2(0, -10)
 shape = SubResource("CircleShape2D_kawgw")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-16, 0)
 gravity = Vector2(0, 0)
 
 [node name="PelletShipMove" type="Node2D" parent="."]
@@ -51,41 +51,48 @@ script = ExtResource("5_ds8ke")
 data = ExtResource("9_ds8ke")
 
 [node name="BaseAttack" type="Node2D" parent="." node_paths=PackedStringArray("spawn_points")]
+rotation = 1.5708
 script = ExtResource("5_4j5kp")
 spawn_points = [NodePath("bullet_spawn_1"), NodePath("bullet_spawn_2")]
 data = ExtResource("7_wg1hv")
 
 [node name="bullet_spawn_1" type="Marker2D" parent="BaseAttack"]
 unique_name_in_owner = true
-position = Vector2(12, -27)
+position = Vector2(14, 2)
 
 [node name="bullet_spawn_2" type="Marker2D" parent="BaseAttack"]
 unique_name_in_owner = true
-position = Vector2(-12, -27)
+position = Vector2(-14, 2)
 
 [node name="MissileBarrage_SecondaryAttack" type="Node2D" parent="." node_paths=PackedStringArray("spawn_points")]
+rotation = 1.5708
 script = ExtResource("5_4j5kp")
 spawn_points = [NodePath("missile_spawn_1"), NodePath("missile_spawn_2")]
 data = ExtResource("9_7emw8")
 
 [node name="missile_spawn_1" type="Marker2D" parent="MissileBarrage_SecondaryAttack"]
 unique_name_in_owner = true
-position = Vector2(12, -27)
+position = Vector2(14, 2)
 
 [node name="missile_spawn_2" type="Marker2D" parent="MissileBarrage_SecondaryAttack"]
 unique_name_in_owner = true
-position = Vector2(-12, -27)
+position = Vector2(-14, 2)
 
 [node name="Boost_Movement_Option" type="Node2D" parent="."]
 script = ExtResource("8_arw5c")
 data = ExtResource("9_ds8ke")
 
 [node name="Mines_Defensive_Option" type="Node2D" parent="." node_paths=PackedStringArray("spawn_points")]
+rotation = 1.5708
 script = ExtResource("5_4j5kp")
 spawn_points = [NodePath("mine_point")]
 data = ExtResource("10_6qb6b")
 
 [node name="mine_point" type="Marker2D" parent="Mines_Defensive_Option"]
 position = Vector2(0, 4)
+
+[node name="ShipSprite" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("12_b562i")
 
 [editable path="HitBox"]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7t5se1mt37bc"]
 
-[ext_resource type="Texture2D" uid="uid://di7vgrdu84bu6" path="res://icon.svg" id="1_4lywa"]
 [ext_resource type="Script" uid="uid://cr15h1348hkq3" path="res://Code/Stuff/target.gd" id="1_q2xcy"]
+[ext_resource type="Texture2D" uid="uid://yhyt6dfs4gim" path="res://Textures/target_spritesheet.png" id="2_4pitt"]
 [ext_resource type="Script" uid="uid://2chbv1gcgea1" path="res://Code/Utilities/hit_box.gd" id="2_a5cam"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4lywa"]
-radius = 32.0156
+radius = 14.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q2xcy"]
-radius = 31.0
+radius = 14.0357
 
 [node name="target" type="StaticBody2D"]
 collision_layer = 9
@@ -19,8 +19,7 @@ script = ExtResource("1_q2xcy")
 shape = SubResource("CircleShape2D_4lywa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_4lywa")
+texture = ExtResource("2_4pitt")
 
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 8
@@ -35,9 +34,13 @@ shape = SubResource("CircleShape2D_q2xcy")
 [node name="hp_bar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 3)
-offset_left = -30.0
-offset_top = -39.0
-offset_right = 30.0
-offset_bottom = -35.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_top = -20.0
+offset_right = 25.0
+offset_bottom = -16.0
+grow_horizontal = 2
 max_value = 1.0
 show_percentage = false

@@ -19,6 +19,7 @@ proj_pierce_count = 1.0
 speed = 750.0
 life_time_distance = 150000.0
 length = 100.0
+attacks_per_second = 1
 dampening = 0.0
 area_size = 1.0
 projectile_life_time = 0.0
