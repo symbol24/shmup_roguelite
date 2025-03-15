@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://yivjwni6uhmx" path="res://Code/Ship/ship.gd" id="1_7cfey"]
 [ext_resource type="Resource" uid="uid://b6jtn2vao62yl" path="res://Data/Ships/EnergyLaserShip/energy_ship.tres" id="2_hh73m"]
 [ext_resource type="TileSet" uid="uid://26cpr7etcqo4" path="res://Data/grey_box_tilesettres.tres" id="3_ukt8l"]
-[ext_resource type="Script" uid="uid://c80hn54jnyt1s" path="res://Data/basic_move.gd" id="4_kjhwa"]
+[ext_resource type="Script" uid="uid://c80hn54jnyt1s" path="res://Code/Ship/Actions/basic_move.gd" id="4_kjhwa"]
 [ext_resource type="Script" uid="uid://cgqwmu7fxwic0" path="res://Code/Ship/Actions/laser_shoot.gd" id="5_10x87"]
 [ext_resource type="Resource" uid="uid://dwuan4ugm2fjr" path="res://Data/Ships/EnergyLaserShip/energy_ship_laser_action_data.tres" id="6_ukt8l"]
 

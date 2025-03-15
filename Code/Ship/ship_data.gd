@@ -10,6 +10,8 @@ class_name ShipData extends Resource
 @export var base_lives:int = 1
 @export var base_speed:float = 400.0
 @export var base_damp:float = 0.3
+@export var base_acceleration:float = 1100.0
+@export var base_friction:float = 100.0
 @export var base_armor:float = 0.0
 @export var base_shield:float = 0.0
 @export var base_crit_chance:float = 0.0

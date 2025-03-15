@@ -1,6 +1,8 @@
 res://Data/Ships/TwinstickShip
-res://Code/Ship
+res://Scene/Ship
+res://Data/Ships/CharacterBodyShip
 res://Code/Ship/Actions
+res://Code/Ship
 res://Scene/Levels
 res://Data/Ships/EnergyLaserShip
 res://Scene/Projectile

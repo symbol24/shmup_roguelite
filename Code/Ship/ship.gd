@@ -10,6 +10,9 @@ var data:ShipData = null
 var direction:Vector2 = Vector2.ZERO
 var last_direction:Vector2 = Vector2.ZERO
 var actions:Array[ShipAction] = []
+var look_at_point:Vector2 = Vector2.ZERO
+var look_rotation:float = 0.0
+var look:bool = false
 
 
 func _ready() -> void:
@@ -18,13 +21,10 @@ func _ready() -> void:
 		Signals.ShipReady.emit(self)
 
 
-func _physics_process(delta: float) -> void:
-	var target_angle:float = Vector2.UP.angle_to(last_direction)
-	if direction != Vector2.ZERO: 
-		target_angle = Vector2.UP.angle_to(direction)
-		last_direction = direction
-	if linear_velocity.length_squared() > 0:
-		rotation = lerp_angle(rotation, target_angle, delta * 10)
+func _physics_process(_delta: float) -> void:
+	if not look and look_at_point != Vector2.ZERO: look_at(look_at_point)
+	elif look: rotation = look_rotation
+	
 
 
 func setup_ship(new_data:ShipData = null) -> void:

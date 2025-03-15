@@ -15,6 +15,7 @@ var ready_to_move:bool = false
 var pos:Vector2 = Vector2.ZERO
 var is_gamepad:bool = true
 var last_direction:Vector2 = Vector2.ZERO
+var last_rotation:float = 0.0
 
 # TODO: Move mouse and gamepad detection into an input manager
 var detecting_mouse_movement:bool = false
@@ -25,6 +26,7 @@ var mouse_move_detection_timer:float = 0.0:
 			detecting_mouse_movement = false
 			is_gamepad = false
 			mouse_move_detection_timer = 0.0
+			ship.rotation = last_rotation
 
 
 func _input(event: InputEvent) -> void:
@@ -48,21 +50,31 @@ func _ready() -> void:
 	
 	
 func _process(delta: float) -> void:
-	if ready_to_move: 
+	if can_act and ready_to_move: 
 		if is_gamepad:
 			var direction:Vector2 = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
 			reticle.position = aim_point_for_controller.position
 			var target_angle:float = Vector2.RIGHT.angle_to(last_direction)
-			if direction != Vector2.ZERO: last_direction = direction
-			if ship!= null: 
-				ship.aim_direction = Vector2.ZERO
-				ship.aim_rot = target_angle
+			if direction != Vector2.ZERO: 
+				if ship!= null: 
+					#ship.rotation = target_angle
+					ship.look_rotation = target_angle
+					ship.look = true
+				last_direction = direction
+				last_rotation = ship.rotation
+			else:
+				ship.look_rotation = last_rotation
+			
 		else: 
 			pos = get_local_mouse_position()
 			reticle.position = pos
-			if ship!= null: ship.aim_direction = pos
+			if ship!= null: 
+				var global_aim:Vector2 = to_global(pos)
+				ship.look_at_point = global_aim
+				ship.look = false
+				last_rotation = ship.rotation
 	
-	if detecting_mouse_movement: mouse_move_detection_timer += delta
+		if detecting_mouse_movement: mouse_move_detection_timer += delta
 
 
 func _spawn_reticle() -> void:
