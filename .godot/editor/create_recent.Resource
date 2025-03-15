@@ -1,5 +1,0 @@
-ProjectileShootData
-BoostData
-TwinStickAimData
-ShipData
-ActionData
