@@ -6,6 +6,7 @@ signal LoadManager(id:StringName)
 signal ManagerLoaded(id:StringName)
 signal LoadScene(id:StringName, display_loading_screen:bool)
 signal SceneLoaded(id:StringName)
+signal Save()
 
 # Levels
 signal LevelReady(id:StringName)
