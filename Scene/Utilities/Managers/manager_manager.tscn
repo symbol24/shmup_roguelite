@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://e2faq44ig35a"]
+
+[ext_resource type="Script" uid="uid://bwbin5nleft4y" path="res://Code/Utilities/Managers/manager_manager.gd" id="1_x2eob"]
+
+[node name="ManagerManager" type="Node" groups=["Manager"]]
+script = ExtResource("1_x2eob")

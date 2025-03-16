@@ -9,7 +9,7 @@ func _ready() -> void:
 	Signals.ActionToggled.connect(_toggle_boost)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if can_act:
 		direction = Input.get_vector("left", "right", "up", "down")
 		var boost:float = data.boost_multiplyer if boosting else 1.0

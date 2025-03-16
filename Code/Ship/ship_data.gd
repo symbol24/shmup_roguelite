@@ -3,6 +3,7 @@ class_name ShipData extends Resource
 
 @export var id:StringName = ""
 @export var ship_uid:String
+@export var unlocked_by_default:bool = false
 
 # Basics
 @export_category("Stats")
