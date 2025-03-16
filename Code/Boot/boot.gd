@@ -19,7 +19,7 @@ func _loades_manager(id:StringName) -> void:
 			Signals.LoadManager.emit(&"scene_manager")
 		&"scene_manager":
 			print("Scene Manager loaded")
-			Signals.LoadScene.emit(&"test_level", true)
+			Signals.LoadScene.emit(&"main_menu", true)
 			queue_free.call_deferred()
 		_:
 			pass
