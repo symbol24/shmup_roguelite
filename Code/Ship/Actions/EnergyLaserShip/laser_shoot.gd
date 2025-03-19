@@ -1,19 +1,33 @@
 class_name LaserShoot extends ProjectileShoot
 
 
-@onready var length_raycast: RayCast2D = %length_raycast
-
 var laser:Laser = null
+var charging:bool = false
+var current_charge:float = 9.9:
+	set(value):
+		current_charge = value
+		current_charge = clampf(current_charge, 0.0, data.max_charge)
+		if not charging and current_charge <= 0.0:
+			_release_shoot()
+		elif charging and current_charge >= data.max_charge:
+			charging = false
 
 
 func _process(delta: float) -> void:
-	if timer_active: _reduce_delay_timer(delta)
 	if can_act and shooting and not cycling: _cycle_shoot()
 	elif can_act and not shooting and cycling: _release_shoot()
-	
+	if cycling: current_charge -= delta
+	if charging: current_charge += data.max_charge * (delta / data.charge_time)
+	if timer_active: 
+		delay_timer -= delta
+		if delay_timer <= 0.0:
+			timer_active = false
+			charging = true
+
 
 func _cycle_shoot() -> void:
 	cycling = true
+	Signals.ShipToggleRotation.emit(true)
 	for point in spawn_points:
 		_shoot_one_bullet(point.global_position)
 
@@ -21,8 +35,10 @@ func _cycle_shoot() -> void:
 func _release_shoot() -> void:
 	remove_child(laser)
 	cycling = false
+	shooting = false
 	delay_timer = data.action_delay / (data.proj_attack_speed + ship.data.attack_speed)
 	timer_active = true
+	Signals.ShipToggleRotation.emit(false)
 
 
 func _shoot_one_bullet(pos:Vector2) -> void:
@@ -35,11 +51,6 @@ func _shoot_one_bullet(pos:Vector2) -> void:
 	add_child(laser)
 	if not laser.is_node_ready(): await laser.ready
 	laser.setup_attack(data, ship, pos, 0.0)
-	length_raycast.target_position.y  = -data.length
-
-	length_raycast.force_raycast_update()
 	var new_length:float = data.length
-	if length_raycast.is_colliding():
-		new_length = global_position.distance_to(length_raycast.get_collider().global_position)
 	
 	laser.setup_length(new_length)

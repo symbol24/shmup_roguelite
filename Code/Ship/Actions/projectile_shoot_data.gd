@@ -26,6 +26,11 @@ class_name ProjectileShootData extends ActionData
 @export_group("Laser")
 @export var length:float = 100.0
 @export var attacks_per_second:int = 1
+@export var max_charge:float = 10.0
+@export var charge_time:float = 3.0
+@export var minimum_shoot_time:float = 0.5
+@export var rotation_speed:float = 10.0
+@export var rotation_multiplier:float = 0.1
 
 @export_group("Fixed")
 @export var dampening:float = 0.0
