@@ -3,10 +3,12 @@ class_name MangerManager extends Node
 
 const SAVELOAD:String = "uid://c1pegw6x2172m"
 const SCENEMANAGER:String = "uid://bofyhb5fhgtkq"
+const UICANVAS:String = "uid://bbrini12rqasr"
 
 
 var save_load:SaveLoadManager = null
 var scene_manager:SceneManager = null
+var ui:CanvasLayer = null
 
 var to_load:String
 var load_sn:StringName
@@ -35,6 +37,8 @@ func _load_manager(id:StringName = "") -> void:
 				to_load = SAVELOAD
 			&"scene_manager":
 				to_load = SCENEMANAGER
+			&"UI":
+				to_load = UICANVAS
 			_:
 				pass
 		if to_load != "":
@@ -57,6 +61,10 @@ func _complete_load() -> void:
 			scene_manager = temp.instantiate()
 			add_child.call_deferred(scene_manager)
 			if not scene_manager.is_node_ready(): await scene_manager.ready
+		&"UI":
+			ui = temp.instantiate()
+			add_child.call_deferred(ui)
+			if not ui.is_node_ready(): await ui.ready
 		_:
 			pass
 	

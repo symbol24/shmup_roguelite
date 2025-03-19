@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bn7ci5var4qqe"]
 
-[ext_resource type="PackedScene" uid="uid://hw7ejgpbt7io" path="res://Scene/Ship/characterbody_ship.tscn" id="2_6e4q7"]
+[ext_resource type="PackedScene" uid="uid://b16jfrk3v3jt4" path="res://Scene/Ship/energy_laser_ship.tscn" id="2_6e4q7"]
 [ext_resource type="PackedScene" uid="uid://c7t5se1mt37bc" path="res://Scene/Stuff/target.tscn" id="2_usv2h"]
 
 [node name="TestLevel" type="Node2D" groups=["level"]]
@@ -8,6 +8,6 @@
 [node name="target" parent="." instance=ExtResource("2_usv2h")]
 position = Vector2(474, 177)
 
-[node name="CharacterbodyShip" parent="." instance=ExtResource("2_6e4q7")]
+[node name="EnergyLaserShip" parent="." instance=ExtResource("2_6e4q7")]
 position = Vector2(640, 360)
 debug_spawn = true

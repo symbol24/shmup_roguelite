@@ -18,6 +18,7 @@ signal ActionToggled(action_id:StringName, toggle:bool)
 # Ship
 signal ShipReady(ship:Node2D)
 signal CharacterShipReady(ship:CharacterBodyShip)
+signal ShipToggleRotation(value:bool)
 
 # UI
 signal DamageNumber(damage:Damage, pos:Vector2)

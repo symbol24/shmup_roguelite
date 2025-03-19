@@ -6,10 +6,13 @@
 script = ExtResource("1_awdwr")
 id = "energy_ship"
 ship_uid = "uid://b16jfrk3v3jt4"
+unlocked_by_default = false
 base_hp = 100.0
 base_lives = 1
-base_speed = 450.0
-base_damp = 0.5
+base_speed = 200.0
+base_damp = 0.3
+base_acceleration = 800.0
+base_friction = 200.0
 base_armor = 0.0
 base_shield = 0.0
 base_crit_chance = 0.0

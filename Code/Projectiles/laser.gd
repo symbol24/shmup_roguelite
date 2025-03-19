@@ -6,9 +6,9 @@ class_name Laser extends Projectile
 
 
 func setup_length(length:float = 100.0) -> void:
-	laser_line.points[1].y = -length
-	laser_collider.shape.size.y = length
-	laser_collider.position.y = -length/2
+	laser_line.points[1] = Vector2(length, 0)
+	laser_collider.shape.size = Vector2(length, laser_line.width)
+	laser_collider.position = Vector2(length/2, 0)
 
 
 func _on_body_entered(_body:Node2D) -> void:

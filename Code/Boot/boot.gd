@@ -16,10 +16,13 @@ func _loades_manager(id:StringName) -> void:
 	match id:
 		&"save_load":
 			print("save load manager loaded")
+			Signals.LoadManager.emit(&"UI")
+		&"UI":
+			print("UI Canvas loaded")
 			Signals.LoadManager.emit(&"scene_manager")
 		&"scene_manager":
 			print("Scene Manager loaded")
-			Signals.LoadScene.emit(&"main_menu", true)
+			Signals.LoadScene.emit(&"main_menu", false)
 			queue_free.call_deferred()
 		_:
 			pass

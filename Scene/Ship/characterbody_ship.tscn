@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://hw7ejgpbt7io"]
+[gd_scene load_steps=13 format=3 uid="uid://hw7ejgpbt7io"]
 
 [ext_resource type="Script" uid="uid://c46qvv84x01ub" path="res://Code/Ship/characterbody_ship.gd" id="1_ekoj8"]
 [ext_resource type="Texture2D" uid="uid://bnmhdykdivwov" path="res://Textures/ship01_spritesheet.png" id="1_ubhcr"]
 [ext_resource type="Resource" uid="uid://b5beqi0dxspqv" path="res://Data/Ships/CharacterBodyShip/character_body_ship_data.tres" id="2_wh8t0"]
 [ext_resource type="Script" uid="uid://jfw6eicaqxfl" path="res://Code/Ship/Actions/CB2DShip/character_body_move.gd" id="4_wh8t0"]
 [ext_resource type="Script" uid="uid://ckaywl6h6w430" path="res://Code/Ship/Actions/CB2DShip/cb2d_twinastick_aim.gd" id="5_txwa4"]
-[ext_resource type="Resource" uid="uid://dyhpbcph4pg28" path="res://Data/Ships/CharacterBodyShip/character_body_aim_data.tres" id="6_ppcm4"]
 [ext_resource type="Script" uid="uid://8oam15xcqxtn" path="res://Code/Ship/Actions/projectile_shoot.gd" id="7_rqlcs"]
 [ext_resource type="Resource" uid="uid://dvfi6alppigjc" path="res://Data/Ships/CharacterBodyShip/character_body_base_attack_data.tres" id="8_81lve"]
 [ext_resource type="Resource" uid="uid://cfpv123fciwdr" path="res://Data/Ships/CharacterBodyShip/character_body_missile_barrage_data.tres" id="9_rpmak"]
@@ -56,7 +55,7 @@ gravity = Vector2(0, 0)
 script = ExtResource("5_txwa4")
 reticle_uid = "uid://sbfjvs8b24o2"
 mouse_move_detection_time = 0.2
-data = ExtResource("6_ppcm4")
+data = ExtResource("8_81lve")
 
 [node name="aim_point_for_controller" type="Marker2D" parent="Aim"]
 unique_name_in_owner = true

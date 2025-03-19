@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkr8qegeloeac"]
+[gd_scene load_steps=13 format=3 uid="uid://bkr8qegeloeac"]
 
 [ext_resource type="Script" uid="uid://yivjwni6uhmx" path="res://Code/Ship/ship.gd" id="1_7k6ks"]
 [ext_resource type="Resource" uid="uid://dm7xpbi0lo242" path="res://Data/Ships/TwinstickShip/twinstick_ship_data.tres" id="2_6fp57"]
 [ext_resource type="Texture2D" uid="uid://bnmhdykdivwov" path="res://Textures/ship01_spritesheet.png" id="3_nx81o"]
 [ext_resource type="Script" uid="uid://bvd3kkdet6cn2" path="res://Code/Ship/Actions/PelletShip/pellet_ship_twinstick_move.gd" id="6_ppxiw"]
 [ext_resource type="Script" uid="uid://donlikjgfwfbt" path="res://Code/Ship/Actions/twinstick_aim.gd" id="6_wqr1u"]
-[ext_resource type="Resource" uid="uid://vd7iavmikcd3" path="res://Data/Ships/TwinstickShip/twinstick_aim_data.tres" id="7_ppxiw"]
 [ext_resource type="Resource" uid="uid://dnkik1cyqdfj8" path="res://Data/Ships/TwinstickShip/twinstick_ship_boost_data.tres" id="7_q232g"]
 [ext_resource type="Script" uid="uid://8oam15xcqxtn" path="res://Code/Ship/Actions/projectile_shoot.gd" id="8_q232g"]
 [ext_resource type="Resource" uid="uid://c4vx5gkvwoo2o" path="res://Data/Ships/TwinstickShip/twinstick_shoot_data.tres" id="9_0pppx"]
@@ -42,7 +41,7 @@ shape = SubResource("CircleShape2D_vefo8")
 script = ExtResource("6_wqr1u")
 reticle_uid = "uid://sbfjvs8b24o2"
 mouse_move_detection_time = 0.2
-data = ExtResource("7_ppxiw")
+data = ExtResource("9_0pppx")
 metadata/_custom_type_script = "uid://donlikjgfwfbt"
 
 [node name="aim_point_for_controller" type="Marker2D" parent="TwinStickAim"]
